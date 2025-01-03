@@ -418,7 +418,7 @@ if not getgenv().key then
 			DiscordInfo.Visible = true
 			DiscordInfo.Text = "Loading ..."
 
-			key_accepted = true
+			getgenv().key_accepted = true
 		else 
 			EnterKey.Text = ""
 			EnterKey.PlaceholderText = "Invalid key"
