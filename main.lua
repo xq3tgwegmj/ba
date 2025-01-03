@@ -1,7 +1,7 @@
 --// Bottle's Archive
 --game.Loaded:Wait()
 
-local key_accepted = false
+getgenv().key_accepted = false
 local plr = game.Players.LocalPlayer
 
 --// Instances
