@@ -470,7 +470,7 @@ if not getgenv().key then
 	end)
 
 else
-	if getgenv().key == "HMN" then key_accepted = true end
+	if getgenv().key == "HMN" then getgenv().key_accepted = true end
 end
 
 
@@ -480,7 +480,7 @@ end
 
 --// Main UI
 
-repeat wait() until key_accepted == true or Loader.Parent == nil
+repeat wait() until getgenv().key_accepted == true or Loader.Parent == nil
 if key_accepted then
 	-- Delete loader UI
 	wait(3)
