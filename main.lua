@@ -2056,7 +2056,7 @@ if key_accepted then
 
 	--// Code
 	Game_Info.Text = "Current game: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
-	local script_unloaded = false
+	getgenv().script_unloaded = false
 
 	-- Tab system
 	function switch_tabs(tab)
@@ -2105,7 +2105,7 @@ if key_accepted then
 	-- Unload
 	UnloadUI_Button.MouseButton1Click:Connect(function()
 		Main:Destroy()
-		script_unloaded = true
+		getgenv().script_unloaded = true
 	end)
 	
 	-- Change background image
@@ -2236,7 +2236,7 @@ if key_accepted then
 			choosing_key = true
 		end)
 		game:GetService("UserInputService").InputBegan:Connect(function(i, p)
-			if script_unloaded then return end
+			if getgenv().script_unloaded then return end
 			
 			if not p and Main.Parent ~= nil then
 				if i.UserInputType == Enum.UserInputType.Keyboard then
